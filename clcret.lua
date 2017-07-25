@@ -81,6 +81,12 @@ clcret.spells = {
 	ss 		= { id = 53601 },		-- sacred shield
 	hw		= { id = 2812  },		-- holy wrath
 	sor 	= { id = 53600 },		-- shield of righteousness
+	
+	sor 	= { id = 53600 },		-- shield of righteousness
+	hotr 	= { id = 53595 },		-- hammer of the righteous
+	hs 		= { id = 20925 },		-- holy shield
+	cons 	= { id = 48819 },		-- consecration
+	jol 	= { id = 53408 },		-- judgement (using wisdom atm)
 }
 
 clcret.protSpells = {
@@ -870,9 +876,9 @@ function clcret:PLAYER_TALENT_UPDATE()
 		self:Enable()
 		self:UpdateShowMethod()
 	elseif (hotrRank == 1) and db.protEnabled then
-		self.spec = "Prot"
-		dq[1] = ppq[1].name
-		dq[2] = ppq[2].name
+		self.spec = "Ret"
+		dq[1] = pq[1].name
+		dq[2] = pq[2].name
 		self:Enable()
 		self:UpdateShowMethod()
 	else
